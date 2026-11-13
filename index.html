@@ -64,6 +64,8 @@ html,body{height:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:14px;line-height:1.5}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
 button,input,select,textarea{font:inherit;color:inherit}
+/* dropdown lists: some systems draw them on white regardless of theme, so set both colours */
+select option,select optgroup{background-color:var(--surface);color:var(--ink)}
 a{color:var(--blue)}
 h1,h2,h3,h4{font-family:var(--f-display);margin:0;text-wrap:balance;letter-spacing:-.01em}
 .mono,.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
